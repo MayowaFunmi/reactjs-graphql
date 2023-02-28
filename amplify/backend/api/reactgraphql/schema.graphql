@@ -44,5 +44,5 @@ type Instruction @model {
   recipe: Recipe @belongsTo
 }
 
-GraphQL endpoint: https://5mkkrptdozb65hcnjd7sy2bgjq.appsync-api.us-east-1.amazonaws.com/graphql
-GraphQL API KEY: da2-hfqwtp6rwfe77htgdx2pnaj4wy
+#GraphQL endpoint: https://5mkkrptdozb65hcnjd7sy2bgjq.appsync-api.us-east-1.amazonaws.com/graphql
+#GraphQL API KEY: da2-hfqwtp6rwfe77htgdx2pnaj4wy
