@@ -1,0 +1,48 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY {
+  globalAuthRule: AuthRule = { allow: public }
+} # FOR TESTING ONLY!
+# type Blog @model {
+#   id: ID!
+#   name: String!
+#   posts: [Post] @hasMany
+# }
+
+# type Post @model {
+#   id: ID!
+#   title: String!
+#   blog: Blog @belongsTo
+#   comments: [Comment] @hasMany
+# }
+
+# type Comment @model {
+#   id: ID!
+#   post: Post @belongsTo
+#   content: String!
+# }
+
+type Recipe @model {
+  id: ID!
+  name: String!
+  ingredients: [Ingredient] @hasMany
+  instructions: [Instruction] @hasMany
+}
+
+type Ingredient @model {
+  id: ID!
+  name: String!
+  quantity: String!
+  recipeId: ID!
+  recipe: Recipe @belongsTo
+}
+
+type Instruction @model {
+  id: ID!
+  info: String!
+  recipeId: ID!
+  recipe: Recipe @belongsTo
+}
+
+GraphQL endpoint: https://5mkkrptdozb65hcnjd7sy2bgjq.appsync-api.us-east-1.amazonaws.com/graphql
+GraphQL API KEY: da2-hfqwtp6rwfe77htgdx2pnaj4wy
